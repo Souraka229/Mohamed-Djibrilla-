@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Djibrilla | Top Crypto Trader & Formateur International</title>
+    <meta name="description" content="Formation en trading crypto avec Mohamed Djibrilla, Top Crypto Trader en Afrique. Master Class 2.0 pour devenir expert en trading.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a0e17;
+            --primary-blue: #132d46;
+            --accent-gold: #ffd700;
+            --accent-teal: #01c9b7;
+            --text-light: #ffffff;
+            --text-gray: #ccd6f6;
+            --card-bg: rgba(19, 45, 70, 0.6);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(1, 201, 183, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 40%);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header & Navigation - MODIFIÉ */
+        header {
+            background-color: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--accent-teal), var(--accent-gold));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+        
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.2rem;
+        }
+        
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-active {
+            color: var(--accent-gold);
+        }
+        
+        .nav-active::after {
+            width: 100% !important;
+        }
+        
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(1, 201, 183, 0.15);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .header-contact:hover {
+            background: rgba(1, 201, 183, 0.25);
+        }
+        
+        .header-contact i {
+            color: var(--accent-teal);
+            font-size: 1.2rem;
+        }
+        
+        .header-contact span {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('bit9.jpg') no-repeat center center/cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--text-light), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2.5rem;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+            color: var(--primary-dark);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(1, 201, 183, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--accent-gold);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-gold);
+            margin: 0 auto 1.5rem;
+            display: block;
+        }
+        
+        .profile-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-gold);
+        }
+        
+        .profile-title {
+            color: var(--accent-teal);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .profile-contact {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(1, 201, 183, 0.2);
+            color: var(--accent-teal);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .contact-icon:hover {
+            background: var(--accent-teal);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        /* Sections générales */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--text-light), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-title p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about {
+            position: relative;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+        }
+        
+        .recognitions {
+            margin-top: 2rem;
+        }
+        
+        .recognition-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-teal);
+        }
+        
+        .recognition-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .recognition-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .recognition-icon {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-gold);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .service-description {
+            color: var(--text-gray);
+        }
+        
+        /* Formation Section */
+        .formation {
+            position: relative;
+        }
+        
+        .formation-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .formation-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .formation-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .formation-org {
+            color: var(--accent-teal);
+            font-size: 1.2rem;
+        }
+        
+        .formation-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .detail-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(10, 14, 23, 0.5);
+            border-radius: 10px;
+        }
+        
+        .detail-icon {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+        
+        .detail-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+        
+        .detail-value {
+            color: var(--accent-teal);
+        }
+        
+        .formation-price {
+            text-align: center;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: linear-gradient(90deg, rgba(1, 201, 183, 0.2), rgba(255, 215, 0, 0.2));
+            border-radius: 10px;
+        }
+        
+        .price-amount {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .price-note {
+            color: var(--text-gray);
+        }
+        
+        /* Testimonials Section */
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(255, 215, 0, 0.1);
+            font-family: serif;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-dark);
+            font-weight: bold;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .author-info h4 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-gold);
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-location {
+            color: var(--accent-teal);
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            position: relative;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            padding-right: 2rem;
+        }
+        
+        .contact-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+        }
+        
+        .contact-description {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(1, 201, 183, 0.2);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent-teal);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 0.3rem;
+            color: var(--text-light);
+        }
+        
+        .contact-details p {
+            color: var(--text-gray);
+        }
+        
+        .contact-form {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .form-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 5px;
+            background: rgba(10, 14, 23, 0.7);
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+            .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(1, 201, 183, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--accent-gold);
+        }
+        
+        .footer-nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-nav a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-nav a:hover {
+            color: var(--accent-gold);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-light);
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            margin-top: 2rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Crypto Background Section */
+        .crypto-bg {
+            background: url('bit9.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            position: relative;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .crypto-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 14, 23, 0.85);
+        }
+        
+        .crypto-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .crypto-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .crypto-text {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        /* Graphique Section */
+        .graph-section {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .graph-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .graph-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .graph-img:hover {
+            transform: translateY(-5px);
+        }
+        
+        .graph-content h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+            text-align: left;
+        }
+        
+        .graph-content p {
+            color: var(--text-gray);
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Academy Section */
+        .academy-section {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .academy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .academy-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+        
+        .academy-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+        }
+        
+        .academy-text {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 4rem;
+            }
+            
+            .hero-text {
+                max-width: 100%;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .graph-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .graph-content h3,
+            .graph-content p {
+                text-align: center;
+            }
+            
+            .header-contact span {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1.2rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .recognition-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .formation-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                padding: 1rem 0;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .profile-card {
+                width: 100%;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                gap: 0.8rem;
+            }
+            
+            nav a {
+                font-size: 0.8rem;
+            }
+            
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .header-contact {
+                padding: 0.5rem;
+            }
+            
+            .crypto-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header MODIFIÉ -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-img">MD</div>
+                <div class="logo-text">Mohamed Djibrilla</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil" class="nav-active">Accueil</a></li>
+                    <li><a href="#about">Àpropos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#temoignages">Témoignages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="https://wa.me/22997592728" class="header-contact">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+229 97 59 27 28</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Top Crypto Trader en Afrique</span>
+                <h1 class="hero-title">Devenez Trader Crypto Professionnel en 2 Mois</h1>
+                <p class="hero-description">
+                    Rejoignez la Master Class 2.0 de Mohamed Djibrilla et transformez votre passion pour la crypto en expertise rentable. Formation complète avec accompagnement personnalisé.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Ans d'expérience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">680+</div>
+                        <div class="stat-label">Personnes formées</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">101</div>
+                        <div class="stat-label">Modules de formation</div>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#formation" class="btn btn-primary">S'inscrire maintenant</a>
+                    <a href="#contact" class="btn btn-secondary">Contacter le coach</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <img src="ma.jpg" alt="Mohamed Djibrilla" class="profile-img">
+                    <h3 class="profile-name">Mohamed Djibrilla</h3>
+                    <p class="profile-title">Formateur International en Trading Crypto</p>
+                    <p>📍 Bénin – Actif en Afrique, Europe et Asie</p>
+                    <div class="profile-contact">
+                        <a href="https://wa.me/22997592728" class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/districtcorporation" class="contact-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Crypto Background Section -->
+    <section class="crypto-bg">
+        <div class="container crypto-content">
+            <h2 class="crypto-title">L'avenir de la finance est dans la crypto</h2>
+            <p class="crypto-text">
+                Rejoignez la révolution financière et apprenez à trader les cryptomonnaies comme un professionnel. Notre formation complète vous offre toutes les compétences nécessaires pour réussir dans ce marché en pleine expansion.
+            </p>
+            <a href="#formation" class="btn btn-primary">Découvrir la formation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h3>À propos de moi</h3>
+                <p>
+                    Je suis Mohamed Djibrilla, acteur économique, Top crypto trader et formateur international avec 8 ans d'expérience dans le domaine de la finance et de l'investissement.
+                </p>
+                <p>
+                    Titulaire d'une Licence en Banque, Finance et Assurances, j'ai formé plus de 680 personnes à travers le monde aux stratégies de trading crypto avancées.
+                </p>
+                <div class="recognitions">
+                    <h4 class="recognition-title">Reconnaissances</h4>
+                    <div class="recognition-list">
+                        <div class="recognition-item">
+                            <span class="recognition-icon"><i class="fas fa-trophy"></i></span>
+                            <span>Top Crypto Traders in Africa</span>
+                        </div>
+                        <div class="recognition-item">
+                            <span class="recognition-icon"><i class="fas fa-award"></i></span>
+                            <span>Brand Ambassadeur</span>
+                        </div>
+                        <div class="recognition-item">
+                            <span class="recognition-icon"><i class="fas fa-medal"></i></span>
+                            <span>Média panafricain engagé</span>
+                        </div>
+                        <div class="recognition-item">
+                            <span class="recognition-icon"><i class="fas fa-star"></i></span>
+                            <span>Lauréat "Financial Leaders Awards"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graph Section -->
+    <section class="graph-section">
+        <div class="container graph-container">
+            <div>
+                <img src="grap.jpg" alt="Analyses de graphiques trading" class="graph-img">
+            </div>
+            <div class="graph-content">
+                <h3>Analyse technique avancée</h3>
+                <p>
+                    Apprenez à analyser les graphiques comme un professionnel. Notre formation vous enseigne les techniques d'analyse technique les plus avancées pour identifier les tendances et prendre des décisions éclairées.
+                </p>
+                <p>
+                    Que vous soyez débutant ou trader expérimenté, vous développerez des compétences qui feront la différence dans vos résultats.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mes Services</h2>
+                <p>Des formations complètes et un accompagnement personnalisé pour réussir dans le trading crypto</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="service-title">Coaching Crypto</h4>
+                    <p class="service-description">Apprentissage du trading spot et futures avec des stratégies éprouvées pour maximiser vos profits.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4 class="service-title">Accompagnement Personnalisé</h4>
+                    <p class="service-description">Suivi individuel adapté à votre niveau et à vos objectifs pour une progression optimale.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4 class="service-title">Formations en Ligne</h4>
+                    <p class="service-description">Formations accessibles partout dans le monde via des plateformes de visioconférence modernes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h4 class="service-title">Interventions Média</h4>
+                    <p class="service-description">Leadership panafricain et expertise médiatique dans le domaine de la finance et du trading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academy Section -->
+    <section class="academy-section">
+        <div class="container academy-content">
+            <img src="aca.jpg" alt="District Trading Academy" class="academy-img">
+            <h2 class="academy-title">District Trading Academy</h2>
+            <p class="academy-text">
+                Notre académie de trading est reconnue comme l'une des meilleures en Afrique. Nous offrons un environnement d'apprentissage exceptionnel avec des ressources de qualité et un accompagnement personnalisé pour garantir votre réussite.
+            </p>
+            <a href="#formation" class="btn btn-primary">Rejoindre l'académie</a>
+        </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section class="formation" id="formation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Master Class 2.0</h2>
+                <p>Une formation complète pour passer de zéro à expert en trading crypto</p>
+            </div>
+            <div class="formation-content">
+                <div class="formation-header">
+                    <h3 class="formation-name">Formation Complète</h3>
+                    <p class="formation-org">District Trading Academy</p>
+                </div>
+                <div class="formation-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4 class="detail-title">Modules</h4>
+                        <p class="detail-value">101 modules détaillés</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4 class="detail-title">Situations d'apprentissage</h4>
+                        <p class="detail-value">19 situations pratiques</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h4 class="detail-title">Évaluations</h4>
+                        <p class="detail-value">11 quiz d'évaluation</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h4 class="detail-title">Accès</h4>
+                        <p class="detail-value">Accès à vie + mises à jour</p>
+                    </div>
+                </div>
+                <div class="formation-price">
+                    <div class="price-amount">64,000F / 100$</div>
+                    <p class="price-note">Coaching gratuit inclus pendant 5 ans après la formation</p>
+                </div>
+                <div class="formation-schedule">
+                    <h4>Horaires des sessions</h4>
+                    <p>Du lundi au vendredi, de 20h à 22h GMT+1</p>
+                    <p>Début de la prochaine session: 18 août 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="temoignages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Témoignages</h2>
+                <p>Ce que disent mes étudiants à propos de la formation</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            Je tiens à vous remercier sincèrement pour la qualité de votre formation en trading crypto. Votre expertise, votre pédagogie et votre disponibilité ont été essentiels pour me permettre d'acquérir des compétences précieuses et de gagner en confiance.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">HO</div>
+                            <div class="author-info">
+                                <h4>Hati OUÉDRAOGO</h4>
+                                <span class="author-location">Burkina Faso 🇧🇫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            Vaneck témoigne de son expérience au CYPT(O) DISTRICT, qu'il qualifie de meilleur centre de formation en trading. Il exprime sa gratitude envers Djibrilla Mohamed Roger pour la qualité de la formation, le temps et l'énergie investis pour transformer des débutants en machines de trading, de vrais professionnels.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">VT</div>
+                            <div class="author-info">
+                                <h4>Vaneck Tiyo</h4>
+                                <span class="author-location">Bénin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Inscrivez-vous à la formation ou contactez-moi pour plus d'informations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Restons en contact</h3>
+                    <p class="contact-description">
+                        Vous avez des questions sur la formation ou souhaitez vous inscrire? Contactez-moi directement via WhatsApp ou remplissez le formulaire d'inscription.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+229 97 59 27 28</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Facebook</h4>
+                                <p>Mohamed Djibrilla</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Site Web</h4>
+                                <p>districtcorporation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 class="form-title">Formulaire d'inscription</h3>
+                    <form id="inscriptionForm">
+                        <div class="form-group">
+                            <label for="name">Nom et Prénom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationalité</label>
+                            <input type="text" id="nationality" name="nationality" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="level">Niveau en trading</label>
+                            <select id="level" name="level" required>
+                                <option value="">Sélectionnez votre niveau</option>
+                                <option value="debutant">Débutant</option>
+                                <option value="intermediaire">Intermédiaire</option>
+                                <option value="avance">Avancé</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Photo (lien ou URL)</label>
+                            <input type="text" id="photo" name="photo" placeholder="Lien vers votre photo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (optionnel)</label>
+                            <textarea id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">S'inscrire maintenant</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+       <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Mohamed Djibrilla</div>
+            <div class="footer-nav">
+                <a href="#accueil">Accueil</a>
+                <a href="#about">À propos</a>
+                <a href="#services">Services</a>
+                <a href="#formation">Formation</a>
+                <a href="#temoignages">Témoignages</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/22997592728" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/districtcorporation" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohamed Djibrilla - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation des statistiques
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const updateCounter = () => {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.ceil(start) + "+";
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target + "+";
+                }
+            };
+            updateCounter();
+        }
+
+        // Observer pour l'animation des éléments
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stat-number')) {
+                        const target = parseInt(entry.target.textContent);
+                        animateCounter(entry.target, target, 2000);
+                    }
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observer les éléments à animer
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            observer.observe(stat);
+        });
+
+        // Formulaire d'inscription
+        document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupérer les données du formulaire
+            const name = document.getElementById('name').value;
+            const nationality = document.getElementById('nationality').value;
+            const level = document.getElementById('level').value;
+            const photo = document.getElementById('photo').value;
+            const message = document.getElementById('message').value;
+            
+            // Préparer le message WhatsApp
+            const whatsappMessage = `Bonjour, je souhaite m'inscrire à la formation.%0A%0ANom: ${name}%0ANationalité: ${nationality}%0ANiveau: ${level}%0APhoto: ${photo}%0AMessage: ${message || 'Aucun message'}`;
+            
+            // Rediriger vers WhatsApp
+            window.open(`https://wa.me/22997592728?text=${whatsappMessage}`, '_blank');
+        });
+
+        // Navigation active
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('nav-active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
