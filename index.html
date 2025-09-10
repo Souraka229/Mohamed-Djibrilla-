@@ -1291,18 +1291,73 @@
         </section>
 <!-- New Images Section -->
     <section class="training-images">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nos Formations</h2>
-                <p>Découvrez des moments capturés lors de nos sessions de formation</p>
-            </div>
-            <div class="image-gallery">
-                <img src="ima1.jpg" alt="Formation 1" class="training-image">
-                <img src="ima2.jpg" alt="Formation 2" class="training-image">
-            </div>
+    <div class="container">
+        <div class="section-title">
+            <h2>Nos Formations</h2>
+            <p>Découvrez des moments capturés lors de nos sessions de formation</p>
         </div>
-    </section>
+        <div class="image-gallery">
+            <img src="ima1.jpg" alt="Formation 1" class="training-image" id="image1">
+            <img src="ima2.jpg" alt="Formation 2" class="training-image" id="image2">
+        </div>
+        <button class="replace-btn" onclick="replaceImages()">Remplacer les images</button>
+    </div>
+    <style>
+        .training-images {
+            padding: 30px 0;
+            background-color: #f9f9f9;
+        }
 
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .section-title p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .training-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        .replace-btn {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .replace-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</section>
     <!-- Testimonials Section -->
     <section class="testimonials" id="temoignages">
         <div class="container">
