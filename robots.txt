@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://districtcorporation.com/sitemap.xml
+
+# Mohamed Djibrilla - District Trading Academy
+# Contact: districtcorporation.com
